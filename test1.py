@@ -1,25 +1,3 @@
-import xml.etree.ElementTree as ET
-
-#testing on parsing XML files - test1.xml
-mytree = ET.parse('test1.xml')
-myroot = mytree.getroot()
-
-print(myroot[0].tag)  #<test> tag
-print(myroot[1].tag)
-print ("length: ",len(myroot))
-
-#iterate through the XML tags
-i=0
-while(i< len(myroot)):
-    for x in myroot[i]:
-        print(x.tag,"->",x.text)
-    i+=1
-
-
-
-
-
-
 # this reverses the words not the letters
 def reverseme2(text):
     results = list(text.split(' '))
