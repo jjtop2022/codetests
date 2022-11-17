@@ -105,5 +105,13 @@ str='stestme4564'
 print(str)
 print(str[::-1])
 
+# I am trying to commit a third time
+str1='hill56543'
+print(str1[::2])
+print(str1[::-2])
+
+
+
+
 
 
