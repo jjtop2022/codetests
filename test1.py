@@ -99,6 +99,11 @@ yy = ['aa', 'bb']
 for x in yy:
     print (x)
 
+# now this is another test
+
+str='stestme4564'
+print(str)
+print(str[::-1])
 
 
 
