@@ -1,4 +1,3 @@
-import string
 
 # this reverses the words not the letters
 def reverseword(text):
@@ -30,7 +29,7 @@ def reverseletter(text):
 
 
 def reverseletter2(text):
-    words = list(text.split(' ')) #split words in a list
+    words = list(text.split()) #split words in a list
     newlist=[]
     for rev in words:
         rev = rev[::-1]
@@ -44,10 +43,10 @@ def reverseletter2(text):
 ##########  list testing
 
 mystring = input("Enter a sentence to input: ")
-print(mystring)
-print(reverseword(mystring))
-print(reverseletter(mystring))
-print(reverseletter2(mystring))
+print("String: ", mystring)
+print("Reversed word: ", reverseword(mystring))
+print("Reversed letters: ", reverseletter(mystring))
+print("Reversed letters 2: ", reverseletter2(mystring))
 
 
 
