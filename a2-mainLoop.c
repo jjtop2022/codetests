@@ -16,6 +16,8 @@ int howMany (char aStrand [SIZE], char neu);
 void dnaToMrna (char aSeq [SIZE], char mRNA [SIZE]);
 void translateDnaToMrnaProteins (char aSeq [SIZE]);
 
+
+/********************  MAIN DRIVER TO TEST FUNCTIONS ********/
 int main () {
 
        /****************************************/
@@ -142,6 +144,10 @@ int main () {
 
 
 }
+
+/*************  END MAIN *******************************/
+/*******************************************************/
+
 
 /****************************/
 /*****  FUNCTIONS BELOW *****/
