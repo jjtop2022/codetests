@@ -1,4 +1,5 @@
 
+
 # this reverses the words not the letters
 def reverseword(text):
     results = list(text.split())
@@ -12,20 +13,32 @@ def reverseletter(text):
     results = list(text.split())
     newword=[]
     for word in results:
-        i=len(word)
+        i=1
         rword=''
-        while i > 0:
-            rword = rword + word[i-1]
-            i = i - 1
+        while i <= len(word):
+            rword = rword + word[-i] #reverse letters from back
+            i = i + 1
         # elimate the spaces
-        rword = ' '.join(rword) #change the list to string
-        rword = rword.replace(" ","") #remove whitespace from string
-
+        #rword = ' '.join(rword) #change the list to string
+        #rword = rword.replace(" ","") #remove whitespace from string
         newword.append(rword)
 
     newword = ' '.join(newword)
     return newword
 
+def reverseletter3(text):
+    results = list(text.split())
+    newword=[]
+    for word in results:
+        rword=''
+        i=1
+        for x in word:
+            rword = rword + word[-i]
+            i = i + 1
+
+        newword.append(rword)
+    newword = '*'.join(newword)
+    return newword
 
 
 def reverseletter2(text):
@@ -47,8 +60,5 @@ print("String: ", mystring)
 print("Reversed word: ", reverseword(mystring))
 print("Reversed letters: ", reverseletter(mystring))
 print("Reversed letters 2: ", reverseletter2(mystring))
-
-
-
-
+print("Reverse letter3 : ", reverseletter3(mystring))
 
