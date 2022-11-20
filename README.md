@@ -1,6 +1,7 @@
 # codetests
-tests for coding in python and C
+Tests for coding in python and C
 
-this is only a test directory
+This contains old and new code for previous assignments and projects.
+
 
 
