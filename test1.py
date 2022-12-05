@@ -1,4 +1,4 @@
-
+from collections import defaultdict
 
 # this reverses the words not the letters
 def reverseword(text):
@@ -61,4 +61,9 @@ print("Reversed word: ", reverseword(mystring))
 print("Reversed letters: ", reverseletter(mystring))
 print("Reversed letters 2: ", reverseletter2(mystring))
 print("Reverse letter3 : ", reverseletter3(mystring))
+
+print(list(reversed(range(0,10))))
+
+my_set = {1,1,2,3} #sets have unique elements, will eliminate redundant elements
+print(my_set)
 
