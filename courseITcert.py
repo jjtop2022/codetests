@@ -766,4 +766,64 @@ sweatpants.add_item(sweatpants.name, sweatpants.material, 6)
 current_stock = polo.Stock_by_Material("Cotton")
 print(current_stock)
 
+#################################################
+
+import random
+print(random.randint(1,10))
+print(random.randint(1,10))
+
+import datetime
+now = datetime.datetime.now()
+print(now)
+
+##########  more class reuse ####################
+
+class Animal:
+    name = ""
+    category = ""
+    
+    def __init__(self, name):
+        self.name = name
+    
+    def set_category(self, category):
+        self.category = category
+
+class Turtle(Animal):
+    category = "reptiles"
+
+class Snake(Animal):
+    category = "reptiles"
+
+class Zoo:
+    def __init__(self):
+        self.current_animals = {} #hash to store animals, animal is the key, category is the value
+    
+    # add to hash - animal name as key, category as value
+    def add_animal(self, animal):
+        self.current_animals[animal.name] = animal.category
+        print(animal.category)
+    
+    def total_of_category(self, category):
+        result = 0
+        # iterate through the hash, animal names and check if same category
+        for animal in self.current_animals.keys():
+          print(animal)
+          if self.current_animals[animal] == category:
+            result += 1
+        return result
+
+zoo = Zoo()
+
+turtle = Turtle("Turtle") #create an instance of the Turtle class
+snake = Snake("Snake") #create an instance of the Snake class
+
+zoo.add_animal(turtle)
+zoo.add_animal(snake)
+print(zoo.total_of_category("reptiles")) #how many zoo animal types in the reptile category
+
+####################################################################
+
+
+
+
 
