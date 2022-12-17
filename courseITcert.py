@@ -823,6 +823,64 @@ print(zoo.total_of_category("reptiles")) #how many zoo animal types in the repti
 
 ####################################################################
 
+def get_event_date(event):
+  return event.date
+
+def current_users(events):
+  events.sort(key=get_event_date)
+  machines = {}
+  for event in events:
+    if event.machine not in machines:
+      machines[event.machine] = set()
+      if event.type == 'login':
+        machines[event.machine].add(event.user)
+      elif event.type == 'logout':
+        machines[event.machine].remove(event.user)
+  return machines
+
+def generate_report(machines):
+  for machine, users in machines.items():
+    if len(users) > 0:
+      #generate a string of logged in users
+      user_list = ", ".join(users)
+      print("{} : {}".format(machine,user_list))
+
+class Event:
+  def __init__(self, event_date, event_type,machine_name,user):
+    self.date = event_date
+    self.type= event_type
+    self.machine = machine_name
+    self.user = user
+
+events = [
+          Event('2020-01-22 11:11:45', 'login', 'mymachine-1','jordon'),
+          Event('2020-01-23 21:15:23', 'login', 'mymachine-1','jordon'),
+          Event('2020-01-21 22:00:34', 'login', 'mymachine-1','killy'),
+          Event('2020-01-23 12:31:09', 'login', 'mymachine-2','jord'),
+          Event('2020-01-24 12:11:23', 'login', 'mymachine-1','jordon'),
+          Event('2020-01-21 01:23:53', 'login', 'mymachine-2','jordon1'),
+          ]
+
+users = current_users(events)
+print(users)
+generate_report(users)
+
+# to do: fix so a user cannot logout of a machine that was not login to
+
+test1={}
+
+test1['a'] = set()
+test1['b'] = {'3','4','56','78'}
+test1['c'] = {9,56,123,345}
+
+for m in test1:
+  print(m)
+  if test1[m] == 'b':
+    test1[m].add('19')
+  elif test1[m] == 'c':
+    test1[m].remove(56)
+
+print(test1['b'], test1['c'], test1['a'])
 
 
 
