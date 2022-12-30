@@ -834,7 +834,7 @@ def current_users(events):
       machines[event.machine] = set()
       if event.type == 'login':
         machines[event.machine].add(event.user)
-      elif event.type == 'logout':
+      elif event.type == 'logout' and (event.user in machines[event.machine]):
         machines[event.machine].remove(event.user)
   return machines
 
@@ -858,7 +858,7 @@ events = [
           Event('2020-01-21 22:00:34', 'login', 'mymachine-1','killy'),
           Event('2020-01-23 12:31:09', 'login', 'mymachine-2','jord'),
           Event('2020-01-24 12:11:23', 'login', 'mymachine-1','jordon'),
-          Event('2020-01-21 01:23:53', 'login', 'mymachine-2','jordon1'),
+          Event('2020-01-21 01:23:53', 'logout', 'mymachine-2','jordon1'),
           ]
 
 users = current_users(events)
@@ -872,16 +872,19 @@ test1={}
 test1['a'] = set()
 test1['b'] = {'3','4','56','78'}
 test1['c'] = {9,56,123,345}
-
+print("test1 before",test1)
 for m in test1:
-  print(m)
-  if test1[m] == 'b':
+  #print(m)
+  if m == 'b':
     test1[m].add('19')
-  elif test1[m] == 'c':
+  if m == 'c':
     test1[m].remove(56)
+  if m == 'a':
+    print("adding")
+    test1[m].add('rabbit')
+test1['b'].add('3')
 
-print(test1['b'], test1['c'], test1['a'])
+print("test1 after",test1)
 
-
-
+####################################################
 
