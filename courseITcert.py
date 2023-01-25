@@ -888,3 +888,155 @@ print("test1 after",test1)
 
 ####################################################
 
+## file manipulation
+
+#Open the file in "read" mode.
+#Iterate over each line in the file and put each guest's name into a Python list.
+#Open the file once again in "write" mode.
+#Add each guest's name in the Python list to the file one by one.
+
+checked_out=["Andrea", "Manuel", "Khalid"]
+temp_list=[]
+
+with open("guests.txt", "r") as guests:
+    for g in guests:
+        temp_list.append(g.strip())
+
+with open("guests.txt", "w") as guests:
+    for name in temp_list:
+        if name not in checked_out:
+            guests.write(name + "\n")
+
+with open("guests.txt") as guests:
+    for line in guests:
+        print(line)
+
+
+#########################################
+# get size of file after adding comments
+import os
+
+def create_python_script(filename):
+  comments = "# Start of a new Python program"
+  with open (filename, "a") as text:
+    text.write(comments)
+  filesize = os.path.getsize(filename)
+  return(filesize)
+
+print(create_python_script("test1.py"))
+#######################################
+
+import os
+
+def new_directory(directory, filename):
+  # Before creating a new directory, check to see if it already exists
+  if os.path.isdir(directory) == False:
+    os.mkdir(directory)
+
+  # Create the new file inside of the new directory
+  os.chdir(directory)
+
+  with open (filename,"a") as file:
+    pass
+
+  # Return the list of files in the new directory
+  return os.listdir()
+
+print(new_directory("PythonPrograms", "script.py"))
+
+#########################################################
+## Assignment print filename and time created
+
+import os
+import datetime
+
+def file_date(filename):
+  # Create the file in the current directory
+  with open(filename,"a") as file:
+    pass
+  timestamp = os.path.getmtime(filename)
+  # Convert the timestamp into a readable format, then into a string
+  ddread = datetime.datetime.fromtimestamp(timestamp)
+
+  # Return just the date portion 
+  # Hint: how many characters are in “yyyy-mm-dd”? 
+  return ("{}".format(ddread.strftime('%Y-%m-%d')))
+
+print(file_date("newfile.txt")) 
+# Should be today's date in the format of yyyy-mm-dd
+
+#################################################################
+
+import os
+def parent_directory():
+  # Create a relative path to the parent 
+  # of the current working directory 
+  relative_parent = os.path.join(___, ___)
+
+  # Return the absolute path of the parent directory
+  return ___
+
+print(parent_directory())
+
+##############  CSV Dictionary read/write ############################
+
+import os
+import csv
+
+# Create a file with data in it
+def create_file(filename):
+  with open(filename, "w") as file:
+    file.write("name,color,type\n")
+    file.write("carnation,pink,annual\n")
+    file.write("daffodil,yellow,perennial\n")
+    file.write("iris,blue,perennial\n")
+    file.write("poinsettia,red,perennial\n")
+    file.write("sunflower,yellow,annual\n")
+
+# Read the file contents and format the information about each row
+def contents_of_file(filename):
+  return_string = ""
+
+  # Call the function to create the file 
+  create_file(filename)
+
+  # Open the file
+  with open (filename, "r") as sss:
+    # Read the rows of the file into a dictionary
+    reader = csv.DictReader(sss)
+    # Process each item of the dictionary
+    for row in reader:
+      return_string += "a {} {} is {}\n".format(row["color"], row["name"], row["type"])
+  return return_string
+
+#Call the function
+print(contents_of_file("flowers.csv"))
+
+###############################################################################
+
+##### using regex
+
+import re
+def check_aei (text):
+  result = re.search(r".m.", text)
+  return result != None
+
+print(check_aei("academia")) # True
+print(check_aei("aerial")) # False
+print(check_aei("paramedic")) # True
+
+##############################################
+
+import re
+def check_punctuation (text):
+  result = re.search(r".[.,!:?]", text)
+  return result != None
+
+print(check_punctuation("This is a sentence that ends with a period.")) # True
+print(check_punctuation("This is a sentence fragment without a period")) # False
+print(check_punctuation("Aren't regular expressions awesome?")) # True
+print(check_punctuation("Wow! We're really picking up some steam now!")) # True
+print(check_punctuation("End of the line")) # False
+
+
+
