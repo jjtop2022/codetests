@@ -67,3 +67,17 @@ print(list(reversed(range(0,10))))
 my_set = {1,1,2,3} #sets have unique elements, will eliminate redundant elements
 print(my_set)
 
+######################################################
+filenames = ["program.c", "stdio.hpp", "sample.hpp", "a.out", "math.hpp", "hpp.out"]
+# Generate newfilenames as a list containing the new filenames
+# using as many lines of code as your chosen method requires.
+newfilenames=[]
+for file in filenames:
+    #check extensions if .hpp
+    fextent = file.split(".")
+    print(fextent[1])
+
+print(newfilenames) 
+# Should be ["program.c", "stdio.h", "sample.h", "a.out", "math.h", "hpp.out"]
+########################################################
+
