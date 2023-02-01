@@ -1,0 +1,18 @@
+<AssignmentList>
+
+<PortalAssignment>
+	<PortalInstallation>sasas95:8080</PortalInstallation>
+	<Portal>episite_dev</Portal>
+</PortalAssignment>
+
+<PortalAssignment>
+	<PortalInstallation>sait153:8080</PortalInstallation>
+	<Portal>episite_dev</Portal>
+</PortalAssignment>
+
+<PortalAssignment>
+	<PortalInstallation>tango:9090</PortalInstallation>
+	<Portal>episite_details</Portal>
+</PortalAssignment>
+
+</AssignmentList>
