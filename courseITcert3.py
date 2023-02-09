@@ -194,7 +194,6 @@ Checking the right side
 
 def linear_search(list, key):
     #Returns the number of steps to determine if key is in the list 
-
     #Initialize the counter of steps
     steps=0
     for i, item in enumerate(list):
@@ -205,7 +204,6 @@ def linear_search(list, key):
 
 def binary_search(list, key):
     #Returns the number of steps to determine if key is in the list 
-
     #List must be sorted:
     list.sort()
 
@@ -229,13 +227,13 @@ def binary_search(list, key):
 
 
 def best_search(list, key):
-    steps_linear = ___ 
-    steps_binary = ___ 
+    steps_linear = linear_search(list,key) 
+    steps_binary = binary_search(list,key)
     results = "Linear: " + str(steps_linear) + " steps, "
     results += "Binary: " + str(steps_binary) + " steps. "
-    if (___):
+    if (steps_linear < steps_binary):
         results += "Best Search is Linear."
-        elif (___):
+    elif (steps_linear > steps_binary):
         results += "Best Search is Binary."
     else:
         results += "Result is a Tie."
