@@ -44,17 +44,18 @@ def compare_strings(string1, string2):
   string2 = string2.lower().strip()
 
   #Ignore punctuation
-  #punctuation = r"[.?!,;:-']"
+  punctuation = r'[-.?!,;:\']' #NOTE: do not put - in front of \' or it will not work
   #remove punctuation
-  string11 = re.sub(r'[^\w\s]', '',string1)   #look for anything that isn't alphanumeric or whitespace and replace with blank
-  string22 = re.sub(r'[^\w\s]', '',string2)
-  
+  #string11 = re.sub(r'[^\w\s]', '',string1)   #look for anything that isn't alphanumeric or whitespace and replace with blank
+  #string22 = re.sub(r'[^\w\s]', '',string2)
+  string11 = re.sub(punctuation, '',string1)   #look for anything that isn't alphanumeric or whitespace and replace with blank
+  string22 = re.sub(punctuation, '',string2)
   
   #DEBUG CODE GOES HERE
   #print(string11+" "+string22)
-
   return string11 == string22
 
+print ("compare strings: ")
 print(compare_strings("Have a Great Day!", "Have a great day?")) # True
 print(compare_strings("It's raining again.", "its raining, again")) # True
 print(compare_strings("Learn to count: 1, 2, 3.", "Learn to count: one, two, three.")) # False

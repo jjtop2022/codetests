@@ -81,3 +81,15 @@ print(newfilenames)
 # Should be ["program.c", "stdio.h", "sample.h", "a.out", "math.h", "hpp.out"]
 ########################################################
 
+import re
+s = "This is, a Test? of: Castles!?."
+ss = "Howdy:, are you're ready-;?"
+
+#s = s.lower().strip()
+
+punct = r'[-?!,.:;\']'
+s1 = re.sub(punct, '', s)
+s2 = re.sub(punct, '',ss)
+print (s1)
+print (s2)
+
