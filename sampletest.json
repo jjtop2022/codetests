@@ -1,0 +1,51 @@
+{
+  "name": "MANGO",
+  "weight": 200,
+  "description": "THIS IS a sample description of the mango text. it is only for testing purposes.",
+  "image": "temp.jpeg"
+}{
+  "name": "MANGO",
+  "weight": 200,
+  "description": "THIS IS a sample description of the mango text. it is only for testing purposes.",
+  "image": "temp.jpeg"
+}{
+  "name": "APPLE",
+  "weight": 100,
+  "description": "This is an apple text and made for testing purposes only.  Apple is a good fruit to be testing.",
+  "image": "temp.jpeg"
+}{
+  "name": "WATERMELON",
+  "weight": 300,
+  "description": "Another example description of watermelon bagging.  Watermelon are good for health.",
+  "image": "temp.jpeg"
+}{
+  "name": "GRAPES",
+  "weight": 400,
+  "description": "Another grapes example is great to test mate.",
+  "image": "temp.jpeg"
+}{
+  "name": "MANGO",
+  "weight": 200,
+  "description": "THIS IS a sample description of the mango text. it is only for testing purposes.",
+  "image": "temp.jpeg"
+}{
+  "name": "APPLE",
+  "weight": 100,
+  "description": "This is an apple text and made for testing purposes only.  Apple is a good fruit to be testing.",
+  "image": "temp.jpeg"
+}{
+  "name": "WATERMELON",
+  "weight": 300,
+  "description": "Another example description of watermelon bagging.  Watermelon are good for health.",
+  "image": "temp.jpeg"
+}{
+  "name": "GRAPES",
+  "weight": 400,
+  "description": "Another grapes example is great to test mate.",
+  "image": "temp.jpeg"
+}{
+  "name": "ORANGE",
+  "weight": 250,
+  "description": "I tribute to orangeman and the icon of mr orange and its policies.",
+  "image": "temp.jpeg"
+}
