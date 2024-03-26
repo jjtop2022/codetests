@@ -1,4 +1,4 @@
-import re
+
 # open a log file and count the number of occurances
 counter = {}
 with open("counttext.log", "r") as f:
@@ -42,6 +42,7 @@ for item in mydata["testcase"]:
 #write to new JSON file
 
 # try to read 3 lines at a time 
+import re
 from itertools import islice   #to be used to read 3 lines at once
 
 filename="sampledata.txt"

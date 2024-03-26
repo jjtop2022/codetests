@@ -48,8 +48,8 @@ def reverseletter2(text):
         rev = rev[::-1]
         newlist.append(rev)
 
-    newlist = ' '.join(newlist)  #convert the list back to a string
-    return newlist
+    newstring = ' '.join(newlist)  #convert the list back to a string
+    return newstring
 
 
         

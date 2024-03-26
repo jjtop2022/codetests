@@ -1,5 +1,3 @@
-#my_hash = defaultdict(list)
-
 L=['aaa',[(1,2),(5,7),(['inner',22,['inner5',['inner6','inner6.1']]],8)],6566]
 
 print(L[1][0])

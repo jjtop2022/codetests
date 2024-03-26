@@ -1,51 +1,81 @@
 {
+  "testcase" :
+[
+{
   "name": "MANGO",
   "weight": 200,
-  "description": "THIS IS a sample description of the mango text. it is only for testing purposes.",
+  "description": "THIS IS a ng purposes.",
   "image": "temp.jpeg"
-}{
-  "name": "MANGO",
-  "weight": 200,
-  "description": "THIS IS a sample description of the mango text. it is only for testing purposes.",
-  "image": "temp.jpeg"
-}{
+},{
+  "name": "MANGO2",
+  "weight": 400,
+  "description": "THIS IS ar testing purposes.",
+  "image": "temp1.jpeg"
+},{
   "name": "APPLE",
   "weight": 100,
-  "description": "This is an apple text and made for testing purposes only.  Apple is a good fruit to be testing.",
-  "image": "temp.jpeg"
-}{
+  "description": "Apple is a good fruit.",
+  "image": "temp2.jpeg"
+},{
   "name": "WATERMELON",
   "weight": 300,
-  "description": "Another example description of watermelon bagging.  Watermelon are good for health.",
-  "image": "temp.jpeg"
-}{
+  "description": " Watermelon are good for health.",
+  "image": "temp3.jpeg"
+},{
   "name": "GRAPES",
   "weight": 400,
   "description": "Another grapes example is great to test mate.",
-  "image": "temp.jpeg"
-}{
+  "image": "temp4.jpeg"
+},{
   "name": "MANGO",
   "weight": 200,
-  "description": "THIS IS a sample description of the mango text. it is only for testing purposes.",
-  "image": "temp.jpeg"
-}{
+  "description": "THIS IS a sample description of the mango.",
+  "image": "temp5.jpeg"
+},{
   "name": "APPLE",
   "weight": 100,
-  "description": "This is an apple text and made for testing purposes only.  Apple is a good fruit to be testing.",
-  "image": "temp.jpeg"
-}{
+  "description": "Apple is a good fruit to be testing.",
+  "image": "temp6.jpeg"
+},{
   "name": "WATERMELON",
   "weight": 300,
-  "description": "Another example description of watermelon bagging.  Watermelon are good for health.",
-  "image": "temp.jpeg"
-}{
+  "description": "Watermelon are good for health.",
+  "image": "temp7.jpeg"
+},{
   "name": "GRAPES",
   "weight": 400,
-  "description": "Another grapes example is great to test mate.",
-  "image": "temp.jpeg"
-}{
+  "description": "grapes is great to test mate.",
+  "image": "temp8.jpeg"
+},{
   "name": "ORANGE",
   "weight": 250,
-  "description": "I tribute to orangeman and the icon of mr orange and its policies.",
-  "image": "temp.jpeg"
+  "description": "I tribute to orangeman.",
+  "image": "temp9.jpeg"
+},{
+  "name": "MANGO",
+  "weight": 200,
+  "description": "THIS IS a sample",
+  "image": "temp20.jpeg"
+},{
+  "name": "APPLE",
+  "weight": 100,
+  "description": "Apple is a good fruit testing.",
+  "image": "temp21.jpeg"
+},{
+  "name": "WATERMELON",
+  "weight": 300,
+  "description": "Watermelon are good for health.",
+  "image": "temp22.jpeg"
+},{
+  "name": "GRAPES",
+  "weight": 400,
+  "description": " Australian.",
+  "image": "temp23.jpeg"
+},{
+  "name": "ORANGE",
+  "weight": 250,
+  "description": "I tribute to orangeman.",
+  "image": "temp24.jpeg"
+}
+]
 }
